@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gQs-gV-yZ2">
+                                <rect key="frame" x="310" y="301.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="showDots:" destination="BYZ-38-t0r" eventType="valueChanged" id="Hv6-0q-gTB"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Показывать дороги" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPA-Vs-Bxf">
+                                <rect key="frame" x="16" y="262.5" width="286" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Показывать точки" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Byr-FY-e7z">
+                                <rect key="frame" x="16" y="301.5" width="286" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UF5-UZ-Y6G">
+                                <rect key="frame" x="310" y="262.5" width="51" height="31"/>
+                                <connections>
+                                    <action selector="showRoads:" destination="BYZ-38-t0r" eventType="valueChanged" id="7SR-Cq-A2j"/>
+                                </connections>
+                            </switch>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="Wj0-4T-8ab">
+                                <rect key="frame" x="0.0" y="40" width="375" height="214.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Wj0-4T-8ab" secondAttribute="height" multiplier="830:475" id="1Vu-0J-7tA"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gQs-gV-yZ2" firstAttribute="centerY" secondItem="Byr-FY-e7z" secondAttribute="centerY" id="6Fo-RM-kw3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Byr-FY-e7z" secondAttribute="bottom" id="6K8-0e-5lG"/>
+                            <constraint firstItem="Byr-FY-e7z" firstAttribute="top" secondItem="jPA-Vs-Bxf" secondAttribute="bottom" constant="8" id="8iy-5m-bbu"/>
+                            <constraint firstItem="Byr-FY-e7z" firstAttribute="height" secondItem="jPA-Vs-Bxf" secondAttribute="height" id="A68-tQ-ImG"/>
+                            <constraint firstItem="UF5-UZ-Y6G" firstAttribute="leading" secondItem="jPA-Vs-Bxf" secondAttribute="trailing" constant="8" id="DhQ-hK-wcV"/>
+                            <constraint firstItem="Wj0-4T-8ab" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="E0y-zk-lDk"/>
+                            <constraint firstItem="gQs-gV-yZ2" firstAttribute="height" secondItem="jPA-Vs-Bxf" secondAttribute="height" id="Gbc-il-MBb"/>
+                            <constraint firstItem="UF5-UZ-Y6G" firstAttribute="centerY" secondItem="jPA-Vs-Bxf" secondAttribute="centerY" id="K7v-4V-Tz6"/>
+                            <constraint firstItem="jPA-Vs-Bxf" firstAttribute="top" secondItem="Wj0-4T-8ab" secondAttribute="bottom" constant="8" id="N8B-4R-V0T"/>
+                            <constraint firstItem="Byr-FY-e7z" firstAttribute="leading" secondItem="jPA-Vs-Bxf" secondAttribute="leading" id="NGF-kB-KEZ"/>
+                            <constraint firstItem="jPA-Vs-Bxf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Sd2-eg-FZd"/>
+                            <constraint firstItem="gQs-gV-yZ2" firstAttribute="centerX" secondItem="UF5-UZ-Y6G" secondAttribute="centerX" id="VA6-9W-xft"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UF5-UZ-Y6G" secondAttribute="trailing" constant="16" id="Xbx-jY-kVQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Wj0-4T-8ab" secondAttribute="trailing" id="aug-fK-VLB"/>
+                            <constraint firstItem="UF5-UZ-Y6G" firstAttribute="height" secondItem="jPA-Vs-Bxf" secondAttribute="height" id="cch-XI-Olp"/>
+                            <constraint firstItem="Wj0-4T-8ab" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="coW-7X-pGT"/>
+                            <constraint firstItem="Byr-FY-e7z" firstAttribute="trailing" secondItem="jPA-Vs-Bxf" secondAttribute="trailing" id="raO-rh-AnW"/>
+                            <constraint firstItem="Wj0-4T-8ab" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vxA-OW-XVk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="planImageView" destination="Wj0-4T-8ab" id="Sth-ud-hlE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.28185907046478" y="116"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="map" width="830" height="475"/>
+    </resources>
+</document>
